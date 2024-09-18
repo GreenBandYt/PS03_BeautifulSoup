@@ -33,13 +33,13 @@ def word_game():
         translated_word = translator.translate(english_word, dest='ru').text
         translated_definition = translator.translate(word_definition, dest='ru').text
 
-        print(f"Значение слова: {translated_definition}")
+        print(f"Значение слова: {translated_definition} ({word_definition})")
         user = input("Что за слово? ")
 
         if user.lower() == translated_word.lower():
             print("Правильно")
         else:
-            print(f"Неправильно, было загадано слово: {translated_word}")
+            print(f"Неправильно, было загадано слово: {translated_word} ({english_word})")
 
         play_again = input("Хотите сыграть еще? (*/нет): ")
         if play_again.lower() == "нет":
